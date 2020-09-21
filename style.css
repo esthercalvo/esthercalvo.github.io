@@ -200,3 +200,14 @@ a {
 }  
     
 
+
+
+img.logo{
+    float: right;
+    max-width: 40%;
+/*     margin: 1rem 1 1rem 1rem; */
+    margin-left: 2%;
+    margin-top: 1%;
+}
+    
+
