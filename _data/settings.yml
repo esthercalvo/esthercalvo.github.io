@@ -16,10 +16,8 @@ courses:
 - {name: 'Stellar Structures', url: 'stellar-structures'}
 
 social:
-- {icon: 'github', link: 'https://github.com/LeNPaul'}
-- {icon: 'twitter', link: 'https://twitter.com/paululele'}
-- {icon: 'instagram', link: 'https://instagram.com/paululele'}
-- {icon: 'linkedin', link: 'https://linkedin.com/in/lenpaul'}
+- {icon: 'github', link: 'https://github.com/esthercalvo'}
+- {icon: 'linkedin', link: 'https://linkedin.com/in/esther-mary-calvo'}
 
 contacts:
 - {name: 'Esther Mary Calvo', title: 'PhD Candidate', department: 'Political Science', institution: 'Lund University', institution_address: '', phone: '', email: 'esther.calvo@svet.lu.se | esthermary.calvo@gmail.com', office: '', image: ''}
