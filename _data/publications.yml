@@ -17,8 +17,15 @@ index:
   journal: 'PhD Dissertation, 2025'
   url: 'https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf',
   image: 'thesis_front.png'
-- title: 'Debating the Populist Pariah':' Changing Party Dynamics and Elite Rhetoric in the Swedish Riksdag',
-  authors: 'Esther Mary Calvo',
-  journal: 'PhD Dissertation, 2025'
-  url: 'https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf',
-  image: 'thesis_front.png'
+
+- title: "Another Paper: New Insights"
+  authors: "Jane Doe and John Smith"
+  journal: "Journal of Important Stuff, 2024"
+  url: "http://example.com/another"
+  image: "new_insight.png"
+  
+#- title: 'Debating the Populist Pariah':' Changing Party Dynamics and Elite Rhetoric in the Swedish Riksdag',
+ # authors: 'Esther Mary Calvo',
+  #journal: 'PhD Dissertation, 2025'
+  #url: 'https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf',
+  #image: 'thesis_front.png'
