@@ -23,7 +23,7 @@ layout: default
     <h5 class="mb-4 fs-5">Undergraduate Courses I taught at University of the Philippines Los Baños</h5>
     <div class="row g-4 mb-5">
       <div class="col-md-12">
-        {% for course in site.data.courses.university1 %}
+        {% for course in site.data.settings.courses %}
           <p>{{ course.name }}</p>
         {% endfor %}
       </div>
@@ -33,7 +33,7 @@ layout: default
     <h5 class="mb-4 fs-5">Courses I taught at Lund University</h5>
     <div class="row g-4 mb-5">
       <div class="col-md-12">
-        {% for course in site.data.courses.university2 %}
+        {% for course in site.data.settings.courses %}
           <p>{{ course.name }}</p>
         {% endfor %}
       </div>
