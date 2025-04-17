@@ -13,60 +13,7 @@
   </div>
 </div> -->
 
-<!-- 
-<div class="row g-5 mb-5 align-items-start">
-  <!-- Left: Title + Publication List -->
-<!-- 
-  <div class="col-md-8">
-    <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
-
-    {% if page.title == "Home" %}
-      {% for item in site.data.publications.featured %}
-        <p><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></p>
-      {% endfor %}
-    {% else %}
-      {% for item in site.data.publications.index %}
-        <p><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></p>
-      {% endfor %}
-    {% endif %}
-  </div>
-  <!-- Right: Optional Image -->
 <!--
-  <div class="col-md-4 text-center">
-    <img src="{{ site.github.url }}/assets/img/thesis_front.png" alt="Publications" class="img-fluid rounded shadow-sm" />
-  </div>
-</div> -->
-
-<!--
-<div class="row g-5 mb-5 align-items-start">
-  <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
-
-  {% for item in site.data.publications.index %}
-  <div class="row mb-4">
-    <!-- Left: Text Info -->
-<!--
-    <div class="col-md-8">
-      <p>
-        <strong>{{ item.name }}</strong><br />
-        <a href="{{ item.url }}" target="_blank" class="btn btn-sm btn-outline-primary mt-2">[Article]</a>
-      </p>
-    </div>
-
-    <!-- Right: Image -->
-<!--
-    <div class="col-md-4 text-center">
-      {% if item.image %}
-      <img src="{{ site.github.url }}/assets/img/{{ item.image }}" 
-           alt="Publication image"
-           class="img-fluid rounded shadow-sm"
-           style="height: 150px; width: 150px; object-fit: cover;"/>
-      {% endif %}
-    </div>
-  </div>
-  {% endfor %}
-</div> -->
-
-
 <div class="row g-5 mb-5">
   <div>
     <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
@@ -80,6 +27,7 @@
     {% for item in publications %}
       <div class="row mb-5 align-items-center">
         <!-- Left: Text -->
+<!--
         <div class="col-md-8">
           <h5 class="fw-semibold mb-1">{{ item.title }}</h5>
           <p class="mb-0 text-muted">{{ item.authors }}</p>
@@ -88,6 +36,7 @@
         </div>
 
         <!-- Right: Image -->
+<!--
         <div class="col-md-4 text-center">
           <img src="{{ site.github.url }}/assets/img/{{ item.image }}"
                alt="Publication image"
@@ -97,4 +46,36 @@
       </div>
     {% endfor %}
   </div>
+</div> -->
+
+<!--Just the PhD as a photo-->
+<div class="row g-5 mb-5 align-items-start">
+  <!-- Left: All Publications -->
+  <div class="col-md-8">
+    <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
+
+    {% if page.title == "Home" %}
+      {% assign publications = site.data.publications.featured %}
+    {% else %}
+      {% assign publications = site.data.publications.index %}
+    {% endif %}
+
+    {% for item in publications %}
+      <div class="mb-4">
+        <h5 class="fw-semibold mb-1">{{ item.title }}</h5>
+        <p class="mb-0 text-muted">{{ item.authors }}</p>
+        <p class="mb-1 fst-italic">{{ item.journal }}</p>
+        <a href="{{ item.url }}" class="btn btn-outline-primary btn-sm mt-2" target="_blank">Read Article</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Right: Single Static Image (e.g., Dissertation cover) -->
+  <div class="col-md-4 text-center">
+    <img src="{{ site.github.url }}/assets/img/thesis_front.png"
+         alt="Dissertation Cover"
+         class="img-fluid rounded shadow-sm"
+         style="max-height: 400px; object-fit: contain;" />
+  </div>
 </div>
+
