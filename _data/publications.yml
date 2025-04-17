@@ -12,11 +12,11 @@
 #image: 'thesis_front.png'}
 
 index:
-#- {title: 'Old Foe, New Friend? Rhetorical responses of mainstream parties toward radical right parties',
-  #authors: 'Esther Mary Calvo',
-  #journal: 'PhD Dissertation, 2025'
-  #url: 'https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf',
-  #image: 'thesis_front.png'}
+- title: "Old Foe, New Friend? Rhetorical responses of mainstream parties toward radical right parties"
+  authors: "Esther Mary Calvo"
+  journal: "PhD Dissertation, 2025"
+  url: "https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf"
+  image: "thesis_front.png"
 
 - title: "Another Paper: New Insights"
   authors: "Jane Doe and John Smith"
