@@ -66,26 +66,35 @@
   {% endfor %}
 </div> -->
 
-<div class="row g-5 mb-5 align-items-center">
-  <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
-  {% for item in site.data.publications.index %}
-  <div class="row mb-4">
-    <!-- Left: Text Info (Publication title, etc.) -->
-    <div class="col-md-6">
-      <p><strong>{{ item.name }}</strong></p>
-      <p>{{ item.authors }}</p>
-      <p><a href="{{ item.url }}" target="_blank" class="btn btn-sm btn-outline-primary">[Article]</a></p>
-    </div>
+<div class="row g-5 mb-5">
+  <div>
+    <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
-    <!-- Right: Image (Larger image size) -->
-    <div class="col-md-6 text-center">
-      <img src="{{ site.github.url }}/assets/img/{{ item.image }}" 
-           alt="Publication image"
-           class="img-fluid rounded shadow-sm"
-           style="max-height: 300px; width: 100%; object-fit: contain; background-color: transparent;" />
-    </div>
+    {% if page.title == "Home" %}
+      {% assign publications = site.data.publications.featured %}
+    {% else %}
+      {% assign publications = site.data.publications.index %}
+    {% endif %}
+
+    {% for item in publications %}
+      <div class="row mb-5 align-items-center">
+        <!-- Left: Text -->
+        <div class="col-md-8">
+          <h5 class="fw-semibold mb-1">{{ item.title }}</h5>
+          <p class="mb-0 text-muted">{{ item.authors }}</p>
+          <p class="mb-1 fst-italic">{{ item.journal }}</p>
+          <a href="{{ item.url }}" class="btn btn-outline-primary btn-sm mt-2" target="_blank">Read Article</a>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="col-md-4 text-center">
+          <img src="{{ site.github.url }}/assets/img/{{ item.image }}"
+               alt="Publication image"
+               class="img-fluid rounded shadow-sm"
+               style="max-height: 250px; object-fit: contain; background-color: transparent;" />
+        </div>
+      </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
-
