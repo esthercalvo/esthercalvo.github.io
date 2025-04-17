@@ -37,54 +37,32 @@
   </div>
 </div> -->
 
-<div class="row g-5 mb-5 align-items-start">
-  <!-- Left: Title + Publication Details -->
-  <div class="col-md-8">
+<div class="row g-5 mb-5">
+  <div class="col-md-12">
     <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
+    {% assign pubs = page.title == "Home" | where: true, true %}
     {% if page.title == "Home" %}
-      {% for item in site.data.publications.featured %}
-        <div class="publication-item mb-4">
-          <!-- Publication Title -->
-          <h4 class="mb-2"><strong>"{{ item.name }}"</strong></h4>
-
-          <!-- Authors -->
-          <p><em>{{ item.authors }}</em></p>
-
-          <!-- Journal and Year -->
-          <p><strong>Published in:</strong> {{ item.journal }} ({{ item.year }})</p>
-
-          <!-- Article Button (Link) -->
-          <a href="{{ item.url }}" target="_blank" class="btn btn-primary btn-sm">Article</a>
-        </div>
-      {% endfor %}
+      {% assign pubs = site.data.publications.featured %}
     {% else %}
-      {% for item in site.data.publications.index %}
-        <div class="publication-item mb-4">
-          <!-- Publication Title -->
-          <h4 class="mb-2"><strong>"{{ item.name }}"</strong></h4>
-
-          <!-- Authors -->
-          <p><em>{{ item.authors }}</em></p>
-
-          <!-- Journal and Year -->
-          <p><strong>Published in:</strong> {{ item.journal }} ({{ item.year }})</p>
-
-          <!-- Article Button (Link) -->
-          <a href="{{ item.url }}" target="_blank" class="btn btn-primary btn-sm">Article</a>
-        </div>
-      {% endfor %}
+      {% assign pubs = site.data.publications.index %}
     {% endif %}
-  </div>
 
-  <!-- Right: Optional Image (Thesis Cover) -->
-  <div class="col-md-4 text-center">
-    <img src="{{ site.github.url }}/assets/img/thesis_front.png" alt="Publications" class="img-fluid rounded shadow-sm" />
+    {% for item in pubs %}
+      <div class="row align-items-center mb-4">
+        <!-- Left: Publication Text -->
+        <div class="col-md-8">
+          <p class="mb-1" style="font-weight: 500;">{{ item.name }}</p>
+          <a href="{{ item.url }}" target="_blank" class="btn btn-outline-primary btn-sm">[Article]</a>
+        </div>
+
+        <!-- Right: Image (optional) -->
+        <div class="col-md-4 text-end">
+          {% if item.image %}
+            <img src="{{ site.github.url }}/assets/img/publications/{{ item.image }}" alt="Publication image" class="img-fluid rounded shadow-sm" style="max-height: 120px;" />
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
-
-
-
-
-
-
