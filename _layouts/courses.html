@@ -16,31 +16,27 @@ layout: default
 
 <div class="row g-5 mb-5">
   <div>
-    <h3 class="fw-bold border-bottom pb-3 mb-4">Courses I Taught</h3>
+    <h3 class="fw-bold border-bottom pb-3 mb-5">Courses</h3>
     
-    <!-- Section for University 1 -->
+    <h4>Courses I taught at University 1</h4>
     <div class="row g-5 mb-5">
       <div class="col-md-12">
-        <h4 class="fw-bold">Courses I Taught at University 1</h4>
-        
-        {% for item in site.settings.courses.uni1 %}
-          <p><a href="{{ item.url }}">{{ item.name }}</a></p>
+        {% for course in site.data.courses.university1 %}
+          <!-- No bold for University 1 courses -->
+          <p>{{ course.name }}</p>
         {% endfor %}
       </div>
     </div>
-    
-    <!-- Section for University 2 -->
+
+    <h4>Courses I taught at University 2</h4>
     <div class="row g-5 mb-5">
       <div class="col-md-12">
-        <h4 class="fw-bold">Courses I Taught at University 2</h4>
-        
-        {% for item in site.settings.courses.uni2 %}
-          <p><a href="{{ item.url }}">{{ item.name }}</a></p>
+        {% for course in site.data.courses.university2 %}
+          <!-- Bold for University 2 courses (or adjust as needed) -->
+          <p class="fw-bold">{{ course.name }}</p>
         {% endfor %}
       </div>
     </div>
 
   </div>
 </div>
-
-
