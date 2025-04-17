@@ -6,8 +6,8 @@ menu:
 
 courses:
 - {name: 'POSC10: Principles of Governance and Politics'}
-- {name: 'POSC141, url: 'Contemporary Political Ideologies'}
-- {name: 'SOSC2', url: 'Social, Political and Economic Thought'}
+- {name: 'POSC141: Contemporary Political Ideologies'}
+- {name: 'SOSC2: Social, Political and Economic Thought'}
 
 social:
 - {icon: 'github', link: 'https://github.com/esthercalvo'}
