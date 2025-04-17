@@ -18,21 +18,21 @@ layout: default
   <div>
     <h3 class="fw-bold border-bottom pb-3 mb-5">Courses</h3>
     
-    <h4>Courses I taught at University 1</h4>
+    <!-- University 1 -->
+    <h5 class="mb-4">Undergraduate Courses I taught at University 1</h5>
     <div class="row g-5 mb-5">
       <div class="col-md-12">
         {% for course in site.data.courses.university1 %}
-          <!-- No bold for University 1 courses -->
           <p>{{ course.name }}</p>
         {% endfor %}
       </div>
     </div>
 
-    <h4>Courses I taught at University 2</h4>
+    <!-- University 2 -->
+    <h5 class="mb-4">Courses I taught at University 2</h5>
     <div class="row g-5 mb-5">
       <div class="col-md-12">
         {% for course in site.data.courses.university2 %}
-          <!-- Bold for University 2 courses (or adjust as needed) -->
           <p class="fw-bold">{{ course.name }}</p>
         {% endfor %}
       </div>
