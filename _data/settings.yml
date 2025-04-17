@@ -10,12 +10,12 @@ menu:
 #- {name: 'SOSC2: Social, Political and Economic Thought'}
 
 courses:
-  uni1:
+  university1:
     - {name: 'POSC10: Principles of Governance and Politics'}
     - {name: 'POSC141: Contemporary Political Ideologies'}
     - {name: 'SOSC2: Social, Political, and Economic Thought'}
     
-  uni2:
+  university2:
     - {name: 'Parties and Political Behavior (Fall 2022, Fall 2023)'}
     - {name: 'Comparative Politics (Spring 2023, Spring 2024)'}
     - {name: 'Research Methods in Development Studies (Fall 2023, Fall 2024)'}
