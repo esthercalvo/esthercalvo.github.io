@@ -1,5 +1,6 @@
 ---
 layout: post
+date: "2025-05-25"
 title: "I'm excited to announce my PhD Defense!"
 ---
 
