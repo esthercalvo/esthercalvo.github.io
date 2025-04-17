@@ -12,18 +12,13 @@
 #image: 'thesis_front.png'}
 
 index:
-- {title: 'Old Foe, New Friend? Rhetorical responses of mainstream parties toward radical right parties',
+- title: 'Old Foe, New Friend? Rhetorical responses of mainstream parties toward radical right parties',
   authors: 'Esther Mary Calvo',
   journal: 'PhD Dissertation, 2025'
   url: 'https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf',
-  image: 'thesis_front.png'}
-- {title: 'Debating the Populist Pariah: Changing Party Dynamics and Elite Rhetoric in the Swedish Riksdag',
-  authors: 'Esther Mary Calvo, Hanna Bäck and Royce Carroll',
-  journal: 'Political Research Quarterly, 2024',
-  url: 'https://doi.org/10.1177/10659129241253220',
-  image: ''}
-- {title: 'Old Foe, New Friend? Rhetorical responses of mainstream parties toward radical right parties',
+  image: 'thesis_front.png'
+- title: 'Old Foe, New Friend? Rhetorical responses of mainstream parties toward radical right parties',
   authors: 'Esther Mary Calvo',
   journal: 'PhD Dissertation, 2025'
   url: 'https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf',
-  image: 'thesis_front.png'}
+  image: 'thesis_front.png'
