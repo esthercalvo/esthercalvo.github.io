@@ -1,12 +1,11 @@
 menu:
-- {name: 'home', url: '/_layouts/home.html'}
 - {name: 'publications', url: '/publications'}
 - {name: 'courses', url: '/courses'}
 - {name: 'cv', url: '/cv'}
 - {name: 'contact', url: '/contact'}
 
 courses:
-- {name: 'Vector Calculus', url: 'vector-calculus'}
+- {name: 'POSC10: Principles of Governance and Politics'}
 - {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
 - {name: 'Stellar Structures', url: 'stellar-structures'}
 
