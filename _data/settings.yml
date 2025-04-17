@@ -4,10 +4,23 @@ menu:
 - {name: 'cv', url: '/cv'}
 - {name: 'contact', url: '/contact'}
 
+#courses:
+#- {name: 'POSC10: Principles of Governance and Politics'}
+#- {name: 'POSC141: Contemporary Political Ideologies'}
+#- {name: 'SOSC2: Social, Political and Economic Thought'}
+
 courses:
-- {name: 'POSC10: Principles of Governance and Politics'}
-- {name: 'POSC141: Contemporary Political Ideologies'}
-- {name: 'SOSC2: Social, Political and Economic Thought'}
+  uni1:
+    - name: "Course 1 at University 1"
+      url: "http://example.com/course1"
+    - name: "Course 2 at University 1"
+      url: "http://example.com/course2"
+    
+  uni2:
+    - name: "Course 1 at University 2"
+      url: "http://example.com/course3"
+    - name: "Course 2 at University 2"
+      url: "http://example.com/course4"
 
 social:
 - {icon: 'github', link: 'https://github.com/esthercalvo'}
