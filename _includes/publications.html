@@ -37,32 +37,28 @@
   </div>
 </div> -->
 
-<div class="row g-5 mb-5">
-  <div class="col-md-12">
-    <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
+<div class="row g-5 mb-5 align-items-start">
+  <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
-    {% assign pubs = page.title == "Home" | where: true, true %}
-    {% if page.title == "Home" %}
-      {% assign pubs = site.data.publications.featured %}
-    {% else %}
-      {% assign pubs = site.data.publications.index %}
-    {% endif %}
+  {% for item in site.data.publications.index %}
+  <div class="row mb-4">
+    <!-- Left: Text Info -->
+    <div class="col-md-8">
+      <p>
+        <strong>{{ item.name }}</strong><br />
+        <a href="{{ item.url }}" target="_blank" class="btn btn-sm btn-outline-primary mt-2">[Article]</a>
+      </p>
+    </div>
 
-    {% for item in pubs %}
-      <div class="row align-items-center mb-4">
-        <!-- Left: Publication Text -->
-        <div class="col-md-8">
-          <p class="mb-1" style="font-weight: 500;">{{ item.name }}</p>
-          <a href="{{ item.url }}" target="_blank" class="btn btn-outline-primary btn-sm">[Article]</a>
-        </div>
-
-        <!-- Right: Image (optional) -->
-        <div class="col-md-4 text-end">
-          {% if item.image %}
-            <img src="{{ site.github.url }}/assets/img/publications/{{ item.image }}" alt="Publication image" class="img-fluid rounded shadow-sm" style="max-height: 120px;" />
-          {% endif %}
-        </div>
-      </div>
-    {% endfor %}
+    <!-- Right: Image -->
+    <div class="col-md-4 text-center">
+      {% if item.image %}
+      <img src="{{ site.github.url }}/assets/img/publications/{{ item.image }}" 
+           alt="Publication image"
+           class="img-fluid rounded shadow-sm"
+           style="max-height: 120px; object-fit: cover;" />
+      {% endif %}
+    </div>
   </div>
+  {% endfor %}
 </div>
