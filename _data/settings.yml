@@ -12,7 +12,6 @@ courses:
 social:
 - {icon: 'github', link: 'https://github.com/esthercalvo'}
 - {icon: 'linkedin', link: 'https://linkedin.com/in/esther-mary-calvo'}
-- {icon: 'mail', link: 'esther.calvo@svet.lu.se'}
 
 contacts:
-- {name: 'Esther Mary Calvo', title: 'PhD Candidate', department: 'Political Science', institution: 'Lund University',  institution_address: 'House: Eden, Allhelgona Kyrkogata 14, Lund',email: 'esther.calvo@svet.lu.se | esthermary.calvo@gmail.com'}
+- {name: 'Esther Mary Calvo', title: 'PhD Candidate', department: 'Political Science', institution: 'Lund University',  institution_address: 'House: Eden, Allhelgona Kyrkogata 14, Lund', email: '<a href="mailto:bl@live.se">bl@live.se</a>'}
