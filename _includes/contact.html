@@ -7,12 +7,7 @@
         <h4>{{ contact.name }}</h4>
         <p>{{ contact.title }} | {{ contact.department }}</p>
         <p>{{ contact.institution }} | {{ contact.institution_address }}</p>
-        <!--<p>Email: {{ contact.email }}</p> -->
-        <p>Email: 
-          <span style="white-space: nowrap;">
-    {{ contact.email1 }} | {{ contact.email2 }}
-          </span>
-        </p>
+        <p>{{ contact.email } | {{contact.email}}</p>
       </div>
     </div>
     {% endfor %}
