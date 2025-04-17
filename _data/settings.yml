@@ -6,8 +6,8 @@ menu:
 
 courses:
 - {name: 'POSC10: Principles of Governance and Politics'}
-- {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
-- {name: 'Stellar Structures', url: 'stellar-structures'}
+- {name: 'POSC141, url: 'Contemporary Political Ideologies'}
+- {name: 'SOSC2', url: 'Social, Political and Economic Thought'}
 
 social:
 - {icon: 'github', link: 'https://github.com/esthercalvo'}
