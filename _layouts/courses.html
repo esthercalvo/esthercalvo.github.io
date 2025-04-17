@@ -4,13 +4,43 @@ layout: default
 
 {{ content }}
 
-<div class="row g-5 mb-5">
+<!--<div class="row g-5 mb-5">
   <div>
     <h3 class="fw-bold border-bottom pb-3 mb-5">Courses</h3>
     {% for course in site.data.settings.courses %}
      <!-- <p><a href="{{ site.github.url }}/courses/{{ course.url}}">{{ course.name }}</a></p> -->
-      <p>{{ course.name }}</p>
+   <!--   <p>{{ course.name }}</p>
     {% endfor %}
   </div>
-</div> 
+</div> -->
+
+<div class="row g-5 mb-5">
+  <div>
+    <h3 class="fw-bold border-bottom pb-3 mb-4">Courses I Taught</h3>
+    
+    <!-- Section for University 1 -->
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h4 class="fw-bold">Courses I Taught at University 1</h4>
+        
+        {% for item in site.settings.courses.uni1 %}
+          <p><a href="{{ item.url }}">{{ item.name }}</a></p>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <!-- Section for University 2 -->
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h4 class="fw-bold">Courses I Taught at University 2</h4>
+        
+        {% for item in site.settings.courses.uni2 %}
+          <p><a href="{{ item.url }}">{{ item.name }}</a></p>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
