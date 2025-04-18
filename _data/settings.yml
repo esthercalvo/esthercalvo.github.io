@@ -17,12 +17,12 @@ courses:
     - name: 'SOSC2: Social, Political, and Economic Thought'
 
   university2:
-    - name: 'Parties and Political Behavior (Fall 2022, Fall 2023)'
-    - name: 'Comparative Politics (Spring 2023, Spring 2024)'
-    - name: 'Research Methods in Development Studies (Fall 2023, Fall 2024)'
-    - name: 'Political Science Methodology (Fall 2023)'
-    - name: 'Swedish Politics (Fall 2024)'
-    - name: 'Data Selection and Visualization in R (Spring 2025)'
+    - name: 'STVC74: Parties and Political Behavior (Fall 2022, Fall 2023)'
+    - name: 'STVC76: Comparative Politics (Spring 2023, Spring 2024)'
+    - name: 'UTVC36: Research Methods in Development Studies (Fall 2023, Fall 2024)'
+    - name: 'STVN14: Political Science Methodology (Fall 2023)'
+    - name: 'STVC01: Swedish Politics (Fall 2024)'
+    - name: 'SIMP59: Data Selection and Visualization in R (Spring 2025)'
     
 #university2:
  # - name: 'Parties and Political Behavior (Fall 2022, Fall 2023)'
