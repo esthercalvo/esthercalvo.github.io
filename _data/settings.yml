@@ -9,6 +9,7 @@ menu:
 #- {name: 'POSC141: Contemporary Political Ideologies'}
 #- {name: 'SOSC2: Social, Political and Economic Thought'}
 
+courses:
 university1:
   - name: 'POSC10: Principles of Governance and Politics'
   - name: 'POSC141: Contemporary Political Ideologies'
