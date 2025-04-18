@@ -15,22 +15,24 @@ layout: default
 </div> -->
 
 
-<div class="row g-5 mb-5">
+<!--<div class="row g-5 mb-5">
   <div>
     <h3 class="fw-bold border-bottom pb-3 mb-5">Courses</h3>
 
     <!-- University 1 -->
+<!--
     <h5 class="mb-4 h6">Undergraduate Courses I taught at University of the Philippines Los Baños</h5>
     <div class="row g-4 mb-5">
       <div class="col-md-12">
-        {% assign course_data = site.data.settings.courses %}
-        {% for course in course_data.university1 %}
-          <p class="mb-1">{{ course.name }}</p>
-        {% endfor %}
+      {% assign university1_courses = site.data.settings.university1 %}
+      {% for course in university1_courses %}
+        <p>{{ course.name }}</p>
+      {% endfor %}
       </div>
     </div>
 
     <!-- University 2 -->
+<!--
     <h5 class="mb-4 h6">Courses I taught at Lund University</h5>
     <div class="row g-4">
       <div class="col-md-12">
@@ -41,4 +43,37 @@ layout: default
     </div>
     
   </div>
+</div> -->
+
+<div class="row g-5 mb-5">
+  <div>
+    <h3 class="fw-bold border-bottom pb-3 mb-5">Courses</h3>
+
+    <!-- Short Description about Teaching Experience -->
+    <p class="mb-4">I have taught comparative politics and quantitative research methods at both the bachelor’s and master’s levels. In my seminars and lab sessions, I encourage student-led discussions and hands-on problem-solving by offering opportunities for them to demonstrate their understanding through practical applications in class. </p>
+
+    <!-- University 1 -->
+    <h5 class="mb-4 h6">Undergraduate Courses I taught at University of the Philippines Los Baños</h5>
+    <div class="row g-4 mb-5">
+      <div class="col-md-12">
+        {% assign university1_courses = site.data.settings.courses.university1 %}
+        {% for course in university1_courses %}
+          <p>{{ course.name }}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- University 2 -->
+    <h5 class="mb-4 h6">Courses I taught at Lund University</h5>
+    <div class="row g-4">
+      <div class="col-md-12">
+        {% assign university2_courses = site.data.settings.courses.university2 %}
+        {% for course in university2_courses %}
+          <p>{{ course.name }}</p>
+        {% endfor %}
+      </div>
+    </div>
+    
+  </div>
 </div>
+
