@@ -1,17 +1,21 @@
 ---
 layout: default
 ---
-
+<!--
 <div class="row g-5 mb-5">
   <div class="col-md-12">
     <h3 class="fw-bold border-bottom pb-3 mb-5">{{ page.title }}</h3>
     {{ content }}
   </div>
-</div> 
-
-<!--
-<div class="post">
-  <h2>Post Title</h2>
-  <img src="path/to/your-image.jpg" alt="Description of image" class="post-image">
-  <p>This is the content of the post with an image.</p>
 </div> -->
+
+<div class="row g-5 mb-5">
+  <div class="col-md-12">
+    {% if page.image %}
+      <img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid mb-4">
+    {% endif %}
+    <h3 class="fw-bold border-bottom pb-3 mb-5">{{ page.title }}</h3>
+    {{ content }}
+  </div>
+</div>
+
