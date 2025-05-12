@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I defended my PhD Dissertation!"
-image: "/assets/img/PhD defense.jpg"
+image: "/assets/img/PhD defense-4.jpg"
 ---
 
 
