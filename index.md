@@ -6,9 +6,9 @@ Hi, I'm Esther! I earned my PhD in Political Science from Lund University in Apr
 
 Outside of work, I enjoy exploring Malmö’s food scene, hunting for my next favorite book, or going for a run. 
 
-Currently, I am on the job market, seeking roles in either academia or industry that involve data management, computational text analysis, and statistical modeling. Feel free to reach out if you know of any opportunities where my skills might be a good fit.
+Currently, I am on the job market, seeking roles in either academia or industry that involve data management, computational text analysis, and statistical modeling. Feel free to reach out if you know of any opportunities where my skills might be a good fit. 
 
-<img width="470" height="205" alt="image" src="https://github.com/user-attachments/assets/6ed1dd61-59ba-4d2e-a067-54eb4b53a2ff" />
+<img width="470" height="205" alt="image" src="https://github.com/user-attachments/assets/6ed1dd61-59ba-4d2e-a067-54eb4b53a2ff"/>
 
 
 
