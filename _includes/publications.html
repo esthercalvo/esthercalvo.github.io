@@ -64,25 +64,23 @@
     </div>
   </div>
 
-   <!-- Publication cards -->
-  {% assign pubs = site._data.publications %}
-  {% if pubs and pubs.size > 0 %}
-    {% for publication in pubs %}
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card shadow-sm h-100 p-3">
-          <strong>{{ publication.title }}</strong><br>
-          <em>{{ publication.author }}</em><br>
-          {% if publication.journal %}{{ publication.journal }}<br>{% endif %}
-          {% if publication.url %}
-            <a href="{{ publication.url }}" target="_blank">View Article</a>
-          {% endif %}
-        </div>
-      </div>
-    {% endfor %}
-  {% else %}
-    <p>No publications found.</p>
-  {% endif %}
+  <div class="row g-4">
+  <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
+  {% assign publications = site.data.publications %}
+  {% for item in publications %}
+    <div class="col-md-6 col-lg-4">
+      <a href="{{ item.url }}" target="_blank" class="text-decoration-none text-dark">
+        <div class="card h-100 shadow-sm rounded hover-shadow">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">{{ item.title }}</h5>
+            <p class="card-text mb-1 text-muted">{{ item.author }}</p>
+            <p class="card-text fst-italic">{{ item.journal }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
 </div>
 
 
