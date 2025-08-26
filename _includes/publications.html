@@ -52,30 +52,39 @@
 
 <div class="row g-4 mb-5">
 
-  <!-- Optional dissertation card -->
+  <!-- Dissertation card -->
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card shadow-sm h-100">
       <img src="{{ site.github.url }}/assets/img/thesis_front.png" 
            class="card-img-top img-fluid rounded" 
            alt="Dissertation">
       <div class="card-body">
-        <p class="card-text text-center">PhD Dissertation</p>
+        <p class="card-text text-center">Dissertation: Computational Text Analysis & Quantitative Methods</p>
       </div>
     </div>
   </div>
 
   <!-- Publication cards -->
-  {% for publication in site.data.cv.publications %}
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="card shadow-sm h-100 p-3">
-      <strong>{{ publication.title }}</strong><br>
-      <em>{{ publication.author }}</em><br>
-      {% if publication.journal %}{{ publication.journal }}{% endif %}<br>
-      {% if publication.url %}<a href="{{ publication.url }}" target="_blank">View Article</a>{% endif %}
-    </div>
-  </div>
-{% endfor %}
+  {% assign pubs = site.data.cv.publications %}
+  {% if pubs and pubs.size > 0 %}
+    {% for publication in pubs %}
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow-sm h-100 p-3">
+          <strong>{{ publication.title }}</strong><br>
+          <em>{{ publication.author }}</em><br>
+          {% if publication.journal %}{{ publication.journal }}<br>{% endif %}
+          {% if publication.url %}
+            <a href="{{ publication.url }}" target="_blank">View Article</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No publications found.</p>
+  {% endif %}
+
 </div>
+
 
 
 
