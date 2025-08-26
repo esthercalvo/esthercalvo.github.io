@@ -11,26 +11,30 @@
 #url: 'https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf', 
 #image: 'thesis_front.png'}
 
-index:
+
 - title: "Old Foe, New Friend? Rhetorical responses of mainstream parties toward radical right parties"
   authors: "Esther Mary Calvo"
   journal: "PhD Dissertation, 2025"
   url: "https://portal.research.lu.se/files/212482182/Thesis_Esther_Calvo_LUCRIS.pdf"
+  image: "assets/img/thesis_front.png"
 
 - title: "Debating the Populist Pariah : Changing Party Dynamics and Elite Rhetoric in the Swedish Riksdag"
   authors: "Esther Mary Calvo, Hanna Bäck, and Royce Carroll"
   journal: "Political Research Quarterly, 2024"
   url: "https://doi.org/10.1177/10659129241253220"
+  image: "assets/img/prq.png"
 
 - title: "An Exploratory Study of the Effectiveness of Unconditional Educational Assistance Program as a Programmatic Electoral Strategy in the Philippines: The Case of Makati City’s Project FREE"
   authors: "Miguel Enrico G. Ayson and Esther Mary Calvo"
   journal: "Jurnal Studi Pemerintahan, 2022"
   url: "https://doi.org/10.18196/jgp.v13i3.15997"
+  image: "assets/img/jsp.png"
 
 - title: "The Philippines 2020: The gamble of the populist leadership"
   authors: "Yvan Ysmael T. Yonaha and Esther Mary Calvo"
   journal: "Asia Maior, 2020"
   url: "https://www.asiamaior.org/?p=1322"
+  image: "assets/img/am.png"
 
 
 #- title: 'Debating the Populist Pariah':' Changing Party Dynamics and Elite Rhetoric in the Swedish Riksdag',
