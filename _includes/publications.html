@@ -70,14 +70,11 @@
     <div class="card shadow-sm h-100 p-3">
       <strong>{{ publication.title }}</strong><br>
       <em>{{ publication.author }}</em><br>
-      {% if publication.journal %}<span>{{ publication.journal }}</span>{% endif %}<br>
-      {% if publication.url %}
-        <a href="{{ publication.url }}" target="_blank">View Article</a>
-      {% endif %}
+      {% if publication.journal %}{{ publication.journal }}{% endif %}<br>
+      {% if publication.url %}<a href="{{ publication.url }}" target="_blank">View Article</a>{% endif %}
     </div>
   </div>
-  {% endfor %}
-
+{% endfor %}
 </div>
 
 
