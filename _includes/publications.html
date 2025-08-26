@@ -59,13 +59,13 @@
            class="card-img-top img-fluid rounded" 
            alt="Dissertation">
       <div class="card-body">
-        <p class="card-text text-center">Dissertation: Computational Text Analysis & Quantitative Methods</p>
+        <p class="card-text text-center">PhD Dissertation</p>
       </div>
     </div>
   </div>
 
-  <!-- Publication cards -->
-  {% assign pubs = site.data.cv.publications %}
+   <!-- Publication cards -->
+  {% assign pubs = site._data.cv.publications %}
   {% if pubs and pubs.size > 0 %}
     {% for publication in pubs %}
       <div class="col-12 col-md-6 col-lg-4">
