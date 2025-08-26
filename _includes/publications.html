@@ -50,38 +50,43 @@
 
 
 
-<div class="row g-4 mb-5">
-
-  <!-- Dissertation card -->
-  <div class="col-12 col-md-6 col-lg-4">
-    <div class="card shadow-sm h-100">
-      <img src="{{ site.github.url }}/assets/img/thesis_front.png" 
-           class="card-img-top img-fluid rounded" 
-           alt="Dissertation">
-      <div class="card-body">
-        <p class="card-text text-center">PhD Dissertation</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="row g-4">
+<div class="container">
   <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
-  {% assign publications = site.data.publications %}
-  {% for item in publications %}
-    <div class="col-md-6 col-lg-4">
-      <a href="{{ item.url }}" target="_blank" class="text-decoration-none text-dark">
-        <div class="card h-100 shadow-sm rounded hover-shadow">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">{{ item.title }}</h5>
-            <p class="card-text mb-1 text-muted">{{ item.author }}</p>
-            <p class="card-text fst-italic">{{ item.journal }}</p>
+  <div class="row g-4">
+    {% if page.title == "Home" %}
+      {% assign publications = site.data.publications.featured %}
+    {% else %}
+      {% assign publications = site.data.publications.index %}
+    {% endif %}
+
+    {% for item in publications %}
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="{{ item.url }}" target="_blank" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm rounded">
+            {% if item.image %}
+              <img src="{{ site.github.url }}/{{ item.image }}" 
+                   class="card-img-top" 
+                   alt="{{ item.title }}">
+            {% else %}
+              <img src="{{ site.github.url }}/assets/img/placeholder.png" 
+                   class="card-img-top" 
+                   alt="Publication cover">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title fw-semibold text-truncate" title="{{ item.title }}">
+                {{ item.title }}
+              </h5>
+              <p class="card-text mb-1 text-muted">{{ item.authors }}</p>
+              <p class="card-text fst-italic">{{ item.journal }}</p>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-  {% endfor %}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 </div>
+
 
 
 
