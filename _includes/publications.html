@@ -50,29 +50,50 @@
 
 
 
-<!--Trial-->
+<!--Old format-->
+<!--Just the PhD as a photo-->
 
 <div class="row g-5 mb-5">
-  <div class="col-12">
-    <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
+  <!-- Full-height Flex Wrapper -->
+  <div class="d-flex w-100" style="align-items: stretch;">
+    
+    <!-- Left: Publications List -->
+    <!--<div class="col-md-8">-->
+    <div class="col-md-6">
+      <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
-    <!-- Optional floating image / visual accent -->
-    <!-- Remove this block if you don't want any image -->
-    <div class="mb-4 float-md-end ms-md-3 mb-md-3 text-center" style="max-width: 150px;">
-      <img src="{{ site.github.url }}/assets/img/thesis_front.png" 
-           alt="Dissertation Visual" 
-           class="img-fluid rounded shadow-sm" 
-           style="width: 100%; height: auto; object-fit: contain;">
+      {% if page.title == "Home" %}
+        {% assign publications = site.data.publications.featured %}
+      {% else %}
+        {% assign publications = site.data.publications.index %}
+      {% endif %}
+
+      {% for item in publications %}
+        <div class="mb-4">
+          <h5 class="fw-semibold mb-1">{{ item.title }}</h5>
+          <p class="mb-0 text-muted">{{ item.authors }}</p>
+          <p class="mb-1 fst-italic">{{ item.journal }}</p>
+          <a href="{{ item.url }}" class="btn btn-outline-primary btn-sm mt-2" target="_blank">Read Article</a>
+        </div>
+      {% endfor %}
     </div>
 
-    <!-- Publications list -->
-    <ul class="list-unstyled">
-      {% for publication in site.data.publications %}
-      <li class="mb-3">
-        <strong>{{ publication.title }}</strong>{% if publication.journal %}, {{ publication.journal }}{% endif %} {% if publication.year %}({{ publication.year }}){% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+    <!-- Right: Dissertation Image filling the height -->
+    <!--<div class="col-md-4 d-flex">-->
+    <!--<div class="col-md-4 d-flex align-items-center justify-content-center">-->
+    <!--<div class="col-md-5 d-flex align-items-center justify-content-center">-->
+    <div class="col-md-5 d-flex align-items-center justify-content-center ms-md-3">
+
+   <!--<div class="col-md-5"> <!-- image -->
+      <img src="{{ site.github.url }}/assets/img/thesis_front.png"
+           alt="Dissertation Cover"
+           width: 100%/>
+           <!--class="img-fluid rounded shadow-sm w-100" -->
+           <!--style="max-height: 100%; max-width: 100%; object-fit: contain;" /> -->
+           <!--style="object-fit: contain; height: auto; width: 100%; margin-top: 120px;" /> -->
+    </div>
+
   </div>
 </div>
+
 
