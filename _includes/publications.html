@@ -51,6 +51,7 @@
 
 
 <div class="row g-4 mb-5">
+
   <!-- Optional dissertation card -->
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card shadow-sm h-100">
@@ -58,22 +59,27 @@
            class="card-img-top img-fluid rounded" 
            alt="Dissertation">
       <div class="card-body">
-        <p class="card-text"> PhD Dissertation </p>
+        <p class="card-text text-center">Dissertation: Computational Text Analysis & Quantitative Methods</p>
       </div>
     </div>
   </div>
 
-  <!-- Publications -->
+  <!-- Publication cards -->
   {% for publication in site.data.publications %}
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card shadow-sm h-100 p-3">
-      <strong>{{ publication.title }}</strong>
-      {% if publication.journal %}, {{ publication.journal }}{% endif %}
-      {% if publication.year %} ({{ publication.year }}){% endif %}
+      <strong>{{ publication.title }}</strong><br>
+      <em>{{ publication.author }}</em><br>
+      {% if publication.journal %}<span>{{ publication.journal }}</span>{% endif %}<br>
+      {% if publication.url %}
+        <a href="{{ publication.url }}" target="_blank">View Article</a>
+      {% endif %}
     </div>
   </div>
   {% endfor %}
+
 </div>
+
 
 
 
