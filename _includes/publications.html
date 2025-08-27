@@ -49,71 +49,60 @@
 </div> -->
 
 <style>
+  /* Container holding each card */
   .card-container {
-    position: relative;
+    position: relative;          /* required for overlay positioning */
+    overflow: hidden;            /* prevent overlay from spilling outside */
     cursor: pointer;
+    border-radius: 0.25rem;      /* match Bootstrap rounded */
   }
 
+  /* Card images */
   .card-container img {
     width: 100%;
-    height: 250px;           /* fixed height for uniformity */
-    object-fit: cover;       /* fills the card, crops if necessary */
+    height: 250px;               /* uniform height */
+    object-fit: cover;           /* fills card, may crop edges */
     display: block;
   }
 
+  /* Overlay for title */
   .overlay-title {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    background: rgba(0,0,0,0.6); /* semi-transparent black */
     color: #fff;
     text-align: center;
     padding: 5px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
     font-size: 0.9rem;
+    opacity: 0;                  /* hidden by default */
+    transition: opacity 0.3s ease;
   }
 
+  /* Show overlay on hover */
   .card-container:hover .overlay-title {
     opacity: 1;
   }
 </style>
 
-
 <div class="container">
   <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
-
   <div class="row g-4">
-    {% if page.title == "Home" %}
-      {% assign publications = site.data.publications.featured %}
-    {% else %}
-      {% assign publications = site.data.publications.index %}
-    {% endif %}
-
+    {% assign publications = site.data.publications.index %}
     {% for item in publications %}
       <div class="col-12 col-md-6">
         <a href="{{ item.url }}" target="_blank" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm rounded">
-            {% if item.image %}
-              <img src="{{ site.github.url }}/{{ item.image }}" 
-                   class="card-img-top" 
-                   alt="{{ item.title }}">
-            {% else %}
-              <img src="{{ site.github.url }}/assets/img/placeholder.png" 
-                   class="card-img-top" 
-                   alt="Publication cover">
-            {% endif %}
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">{{ item.title }}</h5>
-              <p class="card-text mb-1 text-muted">{{ item.authors }}</p>
-              <p class="card-text fst-italic">{{ item.journal }}</p>
-            </div>
+          <div class="card-container shadow-sm">
+            <img src="{{ site.github.url }}/{{ item.image }}" alt="{{ item.title }}">
+            <div class="overlay-title">{{ item.title }}</div>
           </div>
         </a>
       </div>
     {% endfor %}
   </div>
 </div>
+
 
 
 
