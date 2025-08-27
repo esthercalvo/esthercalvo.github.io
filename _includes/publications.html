@@ -48,19 +48,6 @@
   </div>
 </div> -->
 
-<head>
-  <style>
-    .card-img-top {
-      display: block;
-      width: 100%;
-      object-fit: contain;   /* keeps the whole page visible */
-      background-color: #fff; /* fills transparent areas with white */
-      padding: 5px;          /* optional: adds white padding inside */
-      border: 1px solid #eee; /* light grey border instead of black */
-    }
-  </style>
-</head>
-
 <div class="container">
   <h3 class="fw-bold border-bottom pb-3 mb-4">Publications</h3>
 
@@ -75,19 +62,15 @@
       <div class="col-12 col-md-6">
         <a href="{{ item.url }}" target="_blank" class="text-decoration-none text-dark">
           <div class="card h-100 shadow-sm rounded">
-            <div style="background:#fff; display:flex; align-items:center; justify-content:center; height:250px; overflow:hidden;">
-              {% if item.image %}
-                <img src="{{ site.github.url }}/{{ item.image }}" 
-                     class="card-img-top" 
-                     alt="{{ item.title }}" 
-                     style="max-height:100%; max-width:100%; object-fit:contain; background:#fff;" />
-              {% else %}
-                <img src="{{ site.github.url }}/assets/img/placeholder.png" 
-                     class="card-img-top" 
-                     alt="Publication cover"
-                     style="background:#fff;" />
-              {% endif %}
-            </div>
+            {% if item.image %}
+              <img src="{{ site.github.url }}/{{ item.image }}" 
+                   class="card-img-top" 
+                   alt="{{ item.title }}">
+            {% else %}
+              <img src="{{ site.github.url }}/assets/img/placeholder.png" 
+                   class="card-img-top" 
+                   alt="Publication cover">
+            {% endif %}
             <div class="card-body">
               <h5 class="card-title fw-semibold">{{ item.title }}</h5>
               <p class="card-text mb-1 text-muted">{{ item.authors }}</p>
