@@ -51,9 +51,12 @@
 <head>
   <style>
     .card-img-top {
-      background-color: #fff;   /* ensures white background behind transparent images */
-      border: 1px solid #eee;  /* light border instead of dark/black */
+      display: block;
       width: 100%;
+      object-fit: contain;   /* keeps the whole page visible */
+      background-color: #fff; /* fills transparent areas with white */
+      padding: 5px;          /* optional: adds white padding inside */
+      border: 1px solid #eee; /* light grey border instead of black */
     }
   </style>
 </head>
