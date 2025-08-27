@@ -51,17 +51,17 @@
 <style>
   /* Container holding each card */
   .card-container {
-    position: relative;          /* required for overlay positioning */
-    overflow: hidden;            /* prevent overlay from spilling outside */
+    position: relative;          /* for overlay */
+    overflow: hidden;
     cursor: pointer;
-    border-radius: 0.25rem;      /* match Bootstrap rounded */
+    border-radius: 0.25rem;
   }
 
   /* Card images */
   .card-container img {
     width: 100%;
     height: 250px;               /* uniform height */
-    object-fit: cover;           /* fills card, may crop edges */
+    object-fit: cover;           /* fills card, crops if needed */
     display: block;
   }
 
@@ -71,18 +71,28 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.6); /* semi-transparent black */
+    background: rgba(0,0,0,0.6);
     color: #fff;
     text-align: center;
     padding: 5px;
     font-size: 0.9rem;
-    opacity: 0;                  /* hidden by default */
+    opacity: 0;
     transition: opacity 0.3s ease;
   }
 
-  /* Show overlay on hover */
   .card-container:hover .overlay-title {
     opacity: 1;
+  }
+
+  /* Text below card */
+  .card-text-below {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+
+  .card-text-below .journal {
+    font-style: italic;
   }
 </style>
 
@@ -98,10 +108,15 @@
             <div class="overlay-title">{{ item.title }}</div>
           </div>
         </a>
+        <div class="card-text-below">
+          <div class="authors">{{ item.authors }}</div>
+          <div class="journal">{{ item.journal }} {% if item.year %} ({{ item.year }}){% endif %}</div>
+        </div>
       </div>
     {% endfor %}
   </div>
 </div>
+
 
 
 
