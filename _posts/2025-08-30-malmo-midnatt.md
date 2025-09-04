@@ -1,5 +1,5 @@
 ---
 layout: post
-title: "I'm running the Malmö Midnattsloppet!"
+title: "I ran the Malmö Midnattsloppet!"
 ---
 
